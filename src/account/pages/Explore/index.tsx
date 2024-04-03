@@ -5,6 +5,7 @@ import { useEffect } from "react"
 import axios from "axios"
 import { getVehicleRegistrationNumbers } from "../../../data/getVehicleRegistrationNumbers"
 import { ToastContainer, toast } from "react-toastify"
+import { ParkingSpaceCard } from "../../../widgets/cards/ParkingSpaceCard"
 
 export const Explore = () => {
 
@@ -31,11 +32,21 @@ export const Explore = () => {
 
 
 
-    return <section>
+    return <section className="h-full w-full">
         <div className="bg-slate-600/20 p-5 rounded-md">
             <TextBox label="Search" id="search-box" type="search" placeholder="Search" />
         </div>
 
+        <section className="mt-4 w-full">
+            <h2 className="font-bold flex items-center justify-between">Near by Parking Spots <button className="text-sm text-slate-600"> See More <i className="fa-solid fa-angle-right text-sm"></i></button></h2>
+            <div className="flex w-full rounded-md py-2  space-x-4 overflow-x-auto">
+                <ParkingSpaceCard />
+                <ParkingSpaceCard />
+                <ParkingSpaceCard />
+                <ParkingSpaceCard />
+                <ParkingSpaceCard />
+            </div>
+        </section>
         <div className="bg-white rounded-md h-3/4 hidden">
             <div className="flex items-center p-5 h-fit">
                 <button className="hover:text-red-500"><i className="fa-solid fa-close"></i></button>

@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom"
 
 export const Parkify = () => {
     return <main className="w-full flex flex-col justify-between items-center h-screen bg-slate-200">
-        <section className="w-full h-full overflow-y-auto p-5">
+        <section className="w-screen h-full overflow-y-auto p-2.5">
             <Outlet />
         </section>
 
