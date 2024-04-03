@@ -1,6 +1,10 @@
 import { Form } from "react-router-dom"
 import { Button } from "../../../widgets/Button"
 import { TextBox } from "../../../widgets/TextBox"
+import { useEffect } from "react"
+import axios from "axios"
+import { getVehicleRegistrationNumbers } from "../../../data/getVehicleRegistrationNumbers"
+import { ToastContainer, toast } from "react-toastify"
 
 export const Explore = () => {
 
@@ -19,6 +23,11 @@ export const Explore = () => {
         }
     ]
 
+
+    //console.log(getVehicleRegistrationNumbers())
+    useEffect(() => {
+
+    }, [])
 
 
 
